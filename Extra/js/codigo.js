@@ -3,7 +3,7 @@ function convertir(cantidad, cambio) {
   return resultado;
 }
 
-var cambio_yen = 120;
+var cambio_yen = 125;
 window.onload = inicio;
 
 function inicio() {
