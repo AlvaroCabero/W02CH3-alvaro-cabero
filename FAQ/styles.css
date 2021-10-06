@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  height: 100vh;
+}
+
+.outside {
+  /*width: 350px;*/
+  height: 80%;
+  /* display: flex;
+
+  justify-content: center;
+  align-items: center;*/
+}
+.pic-background {
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px #888888;
+}
+
+.centered {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.columna-formulario {
+  padding: 22px;
+}
+
+.columna-grafica {
+}
+
+.woman-pic {
+  width: 100%;
+}
+.backpic {
+  position: absolute;
+  top: -400px;
+  left: -850px;
+}
+
+.middlepic {
+  position: absolute;
+  top: 450px;
+  left: 740px;
+}
+.frontpic {
+  position: absolute;
+  top: 190px;
+  left: -10px;
+}
