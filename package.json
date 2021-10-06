@@ -1,0 +1,22 @@
+{
+  "name": "w02ch3-alvaro-cabero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvaroCabero/W02CH3-alvaro-cabero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlvaroCabero/W02CH3-alvaro-cabero/issues"
+  },
+  "homepage": "https://github.com/AlvaroCabero/W02CH3-alvaro-cabero#readme",
+  "devDependencies": {
+    "jest": "^27.2.4"
+  }
+}
