@@ -194,7 +194,7 @@
       var creditos = 0;
       var creditosMax = 21; //para que tenga 20 de máximo
       var creditosMin = 10;
-      //var dineroAcumulado = 0;
+    
       var recompensa = 0;
       var arruinado = false; //para que solo recargue el crédito la primera vez
       var pasta;
@@ -220,7 +220,7 @@
         pasta = document.querySelector("#dinero");
         numRodillos = document.querySelectorAll(".ventana").length; //número de ventanas
         
-        //creditos += recompensa;
+  
         recompensa = 0;
 
         if(creditos==0 && arruinado == false){
@@ -232,16 +232,13 @@
         for(let k=0; k < numRodillos ; k++){
           rodillos[k] = document.querySelectorAll(".ventana img")[k];
         }
-          //rodillo2 = document.querySelectorAll(".ventana")[1];
-          //rodillo3 = document.querySelectorAll(".ventana")[2];
-
+       
         document.querySelector("#lanzar").onclick = tirar;
         
         
           for(let i=0; i< numRodillos; i++){
           document.querySelectorAll(".boton")[i].onclick = tirar;
-          //document.querySelector("#lanzar").onclick = tirar;
-          //document.querySelector("#lanzar").onclick = tirar;
+         
         
         }
 
@@ -259,30 +256,8 @@
         }
       }
 
-      /*function reiniciar(){
-        //alert("reiniciando")
-        mensaje.innerHTML ="";
-        sonido = document.querySelector("#audio");
-        sonido.pause();
-        velo = document.querySelector("#velo");
-        velo.style.display= 'none';
-        pasta = document.querySelector("#dinero");
-        pasta.innerHTML =`${creditos}<span class="euros">€</span>`;
-        monedas = document.querySelector("#monedas"); 
-        monedas.innerHTML ="";
-        for( let k = 0; k < creditos; k++){
-              monedas.insertAdjacentHTML('beforeend',`<img src="img/${imagenes[5]}">`);
-            }
-        cargarDinero();
-        pintarTabla();
-
-      }*/
-
       function tirar(){
-          //alert("funciona");
-          
-          //alert(this.id);
-          
+   
             if(this.id == "lanzar"){
               if(!arruinado){
                   sonar(0);
@@ -290,8 +265,7 @@
                   pasta.innerHTML =`${creditos}<span class="euros">€</span>`;
                   monedas.innerHTML ="";
                       
-                      //pasta.insertAdjacentHTML('afterbegin', creditos);
-                      //alert(creditos);
+                
                   for( let k = 0; k < creditos; k++){
                       monedas.insertAdjacentHTML('beforeend',`<img src="img/${imagenes[5]}">`);
                       }
@@ -301,12 +275,10 @@
                       for(let k=0; k < numRodillos ; k++){
                         let random = escogerNumero();
                         rodillos[k].src = `img/${imagenes[random]}`;
-                        //rodillos[k].innerHTML ="";
-                        //rodillos[k].insertAdjacentHTML('beforeend',`<img src="img/${imagenes[random]}">`);
-                        azar[k] = random;                       
+                      azar[k] = random;                       
                       }   
 
-                      //alert(azar);
+                    
                   }else{
                       sorry();
                       
@@ -345,7 +317,7 @@
                 
                   for (let k=0; k<todos.length; k++ ){
                     if(this == todos[k]){
-                    // alert(k);
+                 
                     do{
                       var aleatorio = escogerNumero();
                     } while (aleatorio == azar[k]);
@@ -359,28 +331,10 @@
                }
             }
             
-            //alert(recompensa);
-  
-          
+           
       }
 
-      /*function tirarUno(){
-        creditos--;
-
-        if(activo){
-          sonar(2);
-          let todos = this.parentNode.children;
-          for (let k=0; k<todos.length; k++ ){
-            if(this == todos[k]){
-            // alert(k);
-            let random = escogerNumero();
-            rodillos[k].src = `img/${imagenes[random]}`;
-            azar[k] = random;
-            }
-          }
-          comprobarPremio();
-        }
-      }*/
+     
 
       function escogerNumero(){
         return Math.floor(Math.random()*imagenes.length);
